@@ -1,0 +1,17 @@
+#Python dictionary including dictionary.
+citys={'wuhan':
+           {'country':'china',
+            'population':'10 million',
+            'building':'huanghelou'},
+       'beijing':
+           {'country':'china',
+            'population':'20 million',
+            'building':'palace'},
+       'london':
+           {'country':'england',
+            'population':'30 million',
+            'building':'big ben'}}
+for city,content in citys.items():
+    print(city)
+    print(str(content['country'])+" "+str(content['population'])+" "+str(content['building']))
+"""
