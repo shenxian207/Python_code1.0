@@ -1,0 +1,13 @@
+#input language
+sandwich_orders=['dog','cat','mouse','cat','banana','cat']
+finished_sandwich=[]
+bool=True
+while 'cat' in sandwich_orders:
+    sandwich_orders.remove('cat')
+    #print("I made your sandwich")
+    #sandwich=sandwich_orders.pop()
+    #finished_sandwich.append(sandwich)
+print("All sandwichs are finished!")
+print(sandwich_orders)
+#for sandwich in finished_sandwich:
+ #   print(sandwich+" is finished.")
