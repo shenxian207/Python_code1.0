@@ -1,0 +1,21 @@
+#dictionary_instruction
+dog={'type':'dog','name':'pangpang','owner_name':'shen'}
+cat={'type':'cat','name':'tom','owner_name':'cai'}
+mouse={'type':'mouse','name':'jerry','owner_name':'cai'}
+rabbit={'type':'rabbit','name':'lucy','owner_name':'cai'}
+pets=[dog,cat,mouse,rabbit]
+for pet in pets:
+    for key,value in pet.items():
+        print(key.title(),value.title())
+""""""
+favorite_places={'shen':['moutain'],
+                 'cai':['bed','my_jj','work for me'],
+                 'zhan':['zhang','shen','han']}
+for name,value in favorite_places.items():
+    print(str(name)+":")
+    if(len(value)!=1):
+        for va in value:
+            print(va)
+    else:
+        for va in value:
+            print(va)
