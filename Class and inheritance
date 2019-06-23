@@ -1,0 +1,28 @@
+#Class and inheritance
+class User():     #User为父类
+    def __init__(self,first_name,last_name,login_attempts):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.login_attempts=login_attempts
+    def increment_login_attempts(self):
+        self.login_attempts+=1
+    def reset_login_attempts(self):
+        self.login_attempts=0
+    def describe_user(self):
+        print("User's firstname ="+self.first_name)
+        print("User's lastname ="+self.last_name)
+        print("User's login_attempts = "+str(self.login_attempts))
+    def greet_user(self):
+        print("Hello "+self.first_name+" "+self.last_name)
+class Admin(User):                                             #Admin为子类，继承 “ user ” 类
+    def __init__(self,first_name,last_name,login_attempts):    #继承的操作 
+        super().__init__(first_name,last_name,login_attempts)  #super()方法的使用要注意！！！
+        self.privileges=Privileges()                           #将一个类作为该类的属性
+class Privileges():
+    def __init__(self):
+        self.privileges=['can add post','can delete post','can ban user']
+    def show_privileges(self):
+            print(self.privileges)
+user=User('Tom','james',10)
+admin=Admin('Tom','james',10)
+admin.privileges.show_privileges()     #类属性的调用方法
