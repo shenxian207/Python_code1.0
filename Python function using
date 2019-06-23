@@ -1,0 +1,10 @@
+#function
+def car(producer,type,**p):
+    cars={}
+    cars['producer']=producer
+    cars['type']=type
+    for key,value in p.items():
+        cars[key]=value
+    return cars
+car_type=car('byd','energy',color='green',size='L',height='3.4')
+print(car_type)
