@@ -1,0 +1,28 @@
+from random import randint      #建立随机数模板
+#猜数字游戏(运用创造随机数模板)
+x=randint(1,100)
+#print(x)
+y=input("Please enter an number: ")
+while x!=int(y):
+    if(int(y)<x):
+        print("Too small,please try again!")
+    elif(int(y)>x):
+        print("Too big,please try again!")
+    y=input()
+print("You are so good!")
+"""
+
+#制作骰子
+"""         
+class Die():
+    def __init__(self,sides):
+        self.sides=6
+    def roll_die(self):
+        x=randint(1,10)
+        print(x)
+y=Die(6)
+i=1
+while (i<=10):
+    y.roll_die()
+    i+=1
+"""
